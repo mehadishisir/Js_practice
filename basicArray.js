@@ -1,9 +1,14 @@
 
-const startTime = performance.now();
-
-for(i=0; i<=5000; i++){
-    console.log(i)
+const firstArray=[]
+const secoundArray=[]
+for(i=0;i<=5000;i++){
+    if (i<2500){
+        firstArray.push(i)
+    }
+    secoundArray.push(i)
 }
+console.time("firstArray.length")
+console.timeEnd("firstArray.length")
 
-const endTime = performance.now();
-console.log(`Execution time: ${endTime - startTime} ms`);
+console.time("secoundArray.length")
+console.timeEnd("secoundArray.length")
