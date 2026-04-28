@@ -6,6 +6,23 @@ const fruits = ["Banana", "apple", "Cherry", "date"];
 // console.log("Sorted Numbers:", sortedNumbers);
 // console.log("Original Numbers:", numbers);
 
-const sortedFruits = fruits.sort((a,b)=>a.localeCompare(b))
-console.log("Sorted Fruits:", sortedFruits);
-console.log("Original Fruits:", fruits);
+// const sortedFruits = fruits.sort((a,b)=>a.localeCompare(b))
+// console.log("Sorted Fruits:", sortedFruits);
+// console.log("Original Fruits:", fruits);
+
+
+//  Nested array flat
+
+const arr = [1, 2, 3, [4, 5, [6, 7, [8, 9, [10, 11]]]]];
+
+// const flatArr = arr.flat(Infinity);
+
+// console.log(flatArr);
+
+const tagsFromPosts = [
+  ["javascript", "react", "css"],
+  ["node", "express"],
+  ["css", "html", "react"],
+];
+const filterTags= [...new Set(tagsFromPosts.flat())];
+console.log(filterTags);
