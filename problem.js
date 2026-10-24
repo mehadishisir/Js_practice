@@ -1,10 +1,16 @@
-function outer() {
-    let name = "Rahim";
+function once(fn) {
+  let called = false;      // ← n-এর জায়গায় flag, শুরুতে false
+
+  return function () {
+    if(called) return;
+    called = true;
+     fn()
     
-    function inner() {
-        console.log(name); 
-    }
-    
-    inner();
+
+  };
+  
+
 }
-outer(); 
+const greet = once(()=>console.log("hello"))
+greet()
+greet()
