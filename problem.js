@@ -1,16 +1,29 @@
-function once(fn) {
-  let called = false;      // ← n-এর জায়গায় flag, শুরুতে false
+// // 
 
-  return function () {
-    if(called) return;
-    called = true;
-     fn()
-    
+// console.log(typeof foo);   // লাইন ১
 
-  };
-  
+// function foo() {
+//   return 1;
+// }
+
+// console.log(typeof bar);   // লাইন ২
+
+// var bar = function () {
+//   return 2;
+// };
+
+
+
+const counter = {
+    count:0,
+    increment: function (){
+        setTimeout(()=>{
+            this.count++;
+            console.log(this.count);
+
+        },0);
+    }
 
 }
-const greet = once(()=>console.log("hello"))
-greet()
-greet()
+
+counter.increment()
