@@ -15,3 +15,10 @@ function App() {
     </button>
   );
 }
+
+function App() {
+  const [count, setCount] = useState(0);
+  console.log("Rendered!");    // ← এই লাইনটা
+
+  return <button onClick={() => setCount(count + 1)}>Count: {count}</button>;
+}
